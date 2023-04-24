@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* para o elemento não execeder o tamanho da div */
+  font-family: 'Open Sans', sans-serif;
+}
+html,
+body,
+#root {
+  background-color: #efefef;
+  height: 100%;
+}
+
