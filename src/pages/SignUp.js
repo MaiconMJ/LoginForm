@@ -2,6 +2,8 @@ import React from 'react';
 import './SignUp.css';
 import { useNavigate } from 'react-router-dom';
 import  useForm from '../hooks/UseForm'
+import axios from 'axios';
+
 
 function SignUp() {
 
@@ -23,7 +25,15 @@ function SignUp() {
   }
 
   const onSubmitSignup = () => {
-
+    axios
+      .post(`${BASE_URL}/signup`, form)
+      .then((res) => {
+        localStorage.setItem("token", res.data.token)
+        navigate("")
+      })
+      .catch((err) => {
+        console.log(err.response.data)
+      })
   }
 
   return (
