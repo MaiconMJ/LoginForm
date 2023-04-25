@@ -42,22 +42,42 @@ function SignUp() {
         <h2>Register</h2>
         <form>
           <div class="caixa__login-input">
-            <input type="text" required />
+            <input 
+              type="text" 
+              onChange={onChange}
+              value={form.name}
+              required 
+            />
             <label>Name</label>
           </div>
           <div class="caixa__login-input">
-            <input type="password" required />
+            <input 
+              type="password"
+              onChange={onChange}
+              value={form.email}
+              required 
+            />
             <label>Email</label>
           </div>
           <div class="caixa__login-input">
-            <input type="password" required />
+            <input 
+              type="password"
+              onChange={onChange}
+              value={form.password}
+              required 
+            />
             <label>Password</label>
           </div>
           <div class="caixa__login-input">
-            <input type="password" required />
+            <input 
+              type="password"
+              onChange={onChange}
+              value={form.confirmPassword}
+              required
+            />
             <label>Confirm Password</label>
           </div>
-          <a>
+          <a onClick={onSubmitSignup}>
             <span></span>
             <span></span>
             <span></span>
