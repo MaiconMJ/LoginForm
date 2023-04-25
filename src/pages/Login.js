@@ -16,14 +16,14 @@ function Login() {
           </div>
           <div class="caixa__login-input">
             <input type="password" required />
-            <label>Senha</label>
+            <label>Password</label>
           </div>
           <a>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Acessar
+            Login
           </a>
         </form>
       </div>
