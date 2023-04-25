@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../constants/urls';
+import axios from 'axios';
 
 
 function Login() {
 
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const onChangeEmail = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const onChangePassword = (e) => {
+    setPassword(e.target.value)
+  }
   
+  const onSubmitLogin = () => {
+    const url = `${BASE_URL}/`
+  }
+
+  const body = {
+    email,
+    password
+  }
+
+  
+
   return (
     <body>
       <div class="caixa__login">
