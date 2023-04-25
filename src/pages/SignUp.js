@@ -3,7 +3,7 @@ import './SignUp.css';
 import { useNavigate } from 'react-router-dom';
 import  useForm from '../hooks/UseForm'
 import axios from 'axios';
-
+import { BASE_URL } from '../constants/urls';
 
 function SignUp() {
 
