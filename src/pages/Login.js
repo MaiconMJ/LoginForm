@@ -21,14 +21,22 @@ function Login() {
   
   const onSubmitLogin = () => {
     const url = `${BASE_URL}/`
-  }
 
-  const body = {
-    email,
-    password
-  }
+    const body = {
+      email: email,
+      password: password
+    }
 
-  
+    axios
+      .post(url, body)
+      .then((res) => {
+      localStorage.setItem('token', res.data.token)
+      navigate('')
+    })
+    .catch((err) => {
+      alert('User not found')
+    })
+  }
 
   return (
     <body>
