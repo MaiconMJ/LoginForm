@@ -17,3 +17,14 @@ export class UserDatabase extends BaseDatabase {
     }
   }
 }
+
+public getUserByEmail = async (email: string) => {
+  try {
+    const result = await UserDatabase.connection('Login_form_users')
+    .select().where({ email })
+    return result[0]
+  } catch (error) {
+    throw new CustomError(400, error.message)
+  }
+}
+
