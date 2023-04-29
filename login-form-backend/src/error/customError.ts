@@ -4,6 +4,24 @@ export class CustomError extends Error {
   }
 }
 
+export class InvalidName extends CustomError{ 
+  constructor(){
+      super(400, "Invalid name")
+  }
+}
+
+export class InvalidEmail extends CustomError{ 
+  constructor(){
+      super(400, "Invalid email")
+  }
+}
+
+export class InvalidPassword extends CustomError{ 
+  constructor(){
+      super(400, "Invalid password")
+  }
+}
+
 export class UserNotFound extends CustomError{ 
   constructor(){
       super(404, "Usuário não encontrado")
