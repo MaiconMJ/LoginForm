@@ -1,0 +1,22 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "name": "Maicon Miranda de Jesus", 
+    "email": "maicon@teste.com",
+    "password": "senha123"
+}
+
+###
+
+POST http://localhost:3003/user/
+Content-Type: application/json
+
+{
+    "email": "maicon@teste.com",
+    "password": "maicon@teste.com"
+}
+
+###
+
+
