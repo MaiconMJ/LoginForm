@@ -25,8 +25,6 @@ export class UserBusiness {
       if (!email.includes('@')) {
         throw new InvalidEmail()
       }
-
-
       
       const id: string = idGenerator.generateId()
 
