@@ -20,4 +20,4 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3003/user/profile
-Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxZTg5ZDc4LTZkOWEtNGM3MC1iMzY3LWY5ODRlODgzYjY3ZiIsImlhdCI6MTY4Mjk4ODg0MiwiZXhwIjoxNjgyOTkyNDQyfQ.fl3OSV1JV5TMIr9W1w4iScg43-FEGsgrEYubcE6kSn8
