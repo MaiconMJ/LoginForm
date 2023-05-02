@@ -19,4 +19,5 @@ Content-Type: application/json
 
 ###
 
-
+GET http://localhost:3003/user/profile
+Content-Type: application/json
