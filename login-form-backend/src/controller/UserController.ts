@@ -5,7 +5,7 @@ import { GetUserByIdDTO, GetUserDTO, LoginInputDTO, UserInputDTO } from '../mode
 
 export class UserController {
   
-  public signup =async (req: Request, res: Response) => {
+  public signup = async (req: Request, res: Response) => {
     try {
       const { name, email, password } = req.body
 
