@@ -31,10 +31,12 @@ function Login() {
       .post(url, body)
       .then((res) => {
       localStorage.setItem('token', res.data.token)
-      navigate('/user/profile')
+      navigate('/profile')
+      console.log(res.data.token)
     })
     .catch((err) => {
       alert('User not found')
+      console.log(err.response.data)
     })
   }
 
@@ -51,7 +53,7 @@ function Login() {
             <input type="password" required />
             <label>Password</label>
           </div>
-          <a onClick={() => navigate("/user/profile")}>
+          <a onClick={onSubmitLogin}>
             <span></span>
             <span></span>
             <span></span>
