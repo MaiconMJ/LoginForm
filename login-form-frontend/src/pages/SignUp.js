@@ -20,7 +20,7 @@ function SignUp() {
     if (form.password !== form.confirmPassword) {
       alert('Passwords do not match')
     } else {
-      navigate('/')
+      navigate('/profile')
     }
   }
 

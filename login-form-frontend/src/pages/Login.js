@@ -31,7 +31,7 @@ function Login() {
       .post(url, body)
       .then((res) => {
       localStorage.setItem('token', res.data.token)
-      navigate('')
+      navigate('/user/profile')
     })
     .catch((err) => {
       alert('User not found')
@@ -51,7 +51,7 @@ function Login() {
             <input type="password" required />
             <label>Password</label>
           </div>
-          <a>
+          <a onClick={() => navigate("/user/profile")}>
             <span></span>
             <span></span>
             <span></span>
