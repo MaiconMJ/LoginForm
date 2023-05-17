@@ -1,4 +1,4 @@
-const Erro = () => {
+const ErrorPage = () => {
   return (
     <h1>
       Erro!
@@ -7,4 +7,4 @@ const Erro = () => {
 
 }
 
-export default Erro
+export default ErrorPage

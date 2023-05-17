@@ -11,6 +11,12 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  const body = {
+    email: email,
+    password: password
+  }
+
+
   const onChangeEmail = (e) => {
     setEmail(e.target.value)
   }
@@ -18,47 +24,49 @@ function Login() {
   const onChangePassword = (e) => {
     setPassword(e.target.value)
   }
-  
+
   const onSubmitLogin = () => {
-    const url = `${BASE_URL}/`
-
-    const body = {
-      email: email,
-      password: password
-    }
-
     axios
-      .post(url, body)
+      .post(`${BASE_URL}/`, body)
       .then((res) => {
-      localStorage.setItem('token', res.data.token)
-      navigate('/profile')
-      console.log(res.data.token)
-    })
-    .catch((err) => {
-      alert('User not found')
-      console.log(err.response.data)
-    })
+        console.log(res.data.token)
+        localStorage.setItem('token', res.data.token)
+        navigate('/profile')
+      })
+      .catch((err) => {
+        console.log(err.response.data)
+        alert('User not found')
+      })
+
   }
 
   return (
     <body>
       <div class="caixa__login">
-        <h2>Administrativo</h2>
+        <h2>Login</h2>
         <form>
           <div class="caixa__login-input">
-            <input type="text" required />
+            <input
+              type={'email'}
+              value={email}
+              onChange={onChangeEmail}
+              required />
             <label>Email</label>
           </div>
           <div class="caixa__login-input">
-            <input type="password" required />
+            <input
+              type={'password'}
+              value={password}
+              onChange={onChangePassword}
+              required />
             <label>Password</label>
           </div>
-          <a onClick={onSubmitLogin}>
+          <a onClick={onSubmitLogin}> 
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Login
+            Enter
           </a>
         </form>
       </div>

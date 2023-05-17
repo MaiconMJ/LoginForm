@@ -2,8 +2,8 @@ POST http://localhost:3003/user/signup
 Content-Type: application/json
 
 {
-    "name": "Maicon Miranda de Jesus", 
-    "email": "maicon@teste.com",
+    "name": "Gisela de Souza Abrahão Miranda", 
+    "email": "gisela@teste.com",
     "password": "senha123"
 }
 
@@ -13,11 +13,11 @@ POST http://localhost:3003/user/
 Content-Type: application/json
 
 {
-    "email": "maicon@teste.com",
+    "email": "gisela@teste.com",
     "password": "senha123"
 }
 
 ###
 
 GET http://localhost:3003/user/profile
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgxZTg5ZDc4LTZkOWEtNGM3MC1iMzY3LWY5ODRlODgzYjY3ZiIsImlhdCI6MTY4Mjk4ODg0MiwiZXhwIjoxNjgyOTkyNDQyfQ.fl3OSV1JV5TMIr9W1w4iScg43-FEGsgrEYubcE6kSn8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIyMGQ5ZjY3LWRiZmMtNGRkOC1iM2NiLWNhMjU5OTQ4ZmJkZiIsImlhdCI6MTY4NDMzOTc5MiwiZXhwIjoxNjg0MzQzMzkyfQ.C-OH5iRoo8v7fimL2QybQs3EAHr8qg8SMU6xX_q57Zk
