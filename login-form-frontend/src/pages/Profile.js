@@ -5,13 +5,13 @@ import { useProtectedPage } from '../hooks/UseProtectPage';
 
 function Profile() {
 
-  // useProtectedPage();
+  useProtectedPage();
 
   return (
     <body>
       <div class="caixa__login">
         <h2>Profile</h2>
-        <form>
+        <form style={{textAlign: 'center'}}>
           <a>
             <span></span>
             <span></span>
