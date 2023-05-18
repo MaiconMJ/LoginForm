@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './SignUp.css';
 import { useNavigate } from 'react-router-dom';
 import  useForm from '../hooks/UseForm'
@@ -8,20 +8,22 @@ import { BASE_URL } from '../constants/urls';
 function SignUp() {
 
   const navigate = useNavigate();
-  const [form, onChange, clear] = useForm({
+  const [form, onChange/*, clear*/] = useForm({
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
   })
 
-  const onSubmitForm = (e) => {
-    e.preventDefault()
+  
+
+  const onSubmitForm = (event) => {
+    event.preventDefault()
     if (form.password !== form.confirmPassword) {
       alert('Passwords do not match')
     } else {
       alert("successful registration")
-      navigate('/')
+      navigate('/profile')
     }
   }
 
@@ -29,8 +31,9 @@ function SignUp() {
     axios
       .post(`${BASE_URL}/signup`, form)
       .then((res) => {
+        console.log(res.data.token)
         localStorage.setItem("token", res.data.token)
-        navigate("")
+        navigate("/profile")
       })
       .catch((err) => {
         console.log(err.response.data)
@@ -41,11 +44,12 @@ function SignUp() {
     <body>
       <div class="caixa__login">
         <h2>Register</h2>
-        <form>
+        <form onSubmit={onSubmitForm}>
           <div class="caixa__login-input">
             <input 
-              type="text" 
+              type={'text'}
               onChange={onChange}
+              name={'name'}
               value={form.name}
               required 
             />
@@ -53,8 +57,9 @@ function SignUp() {
           </div>
           <div class="caixa__login-input">
             <input 
-              type="password"
+              type={'email'}
               onChange={onChange}
+              name={'email'}
               value={form.email}
               required 
             />
@@ -62,8 +67,9 @@ function SignUp() {
           </div>
           <div class="caixa__login-input">
             <input 
-              type="password"
+              type={'password'}
               onChange={onChange}
+              name={'password'}
               value={form.password}
               required 
             />
@@ -73,6 +79,7 @@ function SignUp() {
             <input 
               type="password"
               onChange={onChange}
+              name={'confirmPassword'}
               value={form.confirmPassword}
               required
             />
