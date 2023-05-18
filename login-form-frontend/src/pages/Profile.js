@@ -17,7 +17,7 @@ function Profile() {
             <span></span>
             <span></span>
             <span></span>
-            Congratulations!
+            You are logged!
           </a>
         </form>
       </div>
