@@ -20,8 +20,10 @@ function SignUp() {
 
   const onSubmitForm = (event) => {
     event.preventDefault()
+
     if (form.password !== form.confirmPassword) {
       alert('Passwords do not match')
+
     } else {
       navigate('/profile')
     }
