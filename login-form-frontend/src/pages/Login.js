@@ -39,8 +39,6 @@ function Login() {
         alert('User not found')
       })
 
-
-
   }
 
   return (
@@ -64,7 +62,7 @@ function Login() {
               required />
             <label>Password</label>
           </div>
-          <a onClick={() => goToLogin(navigate)}> 
+          <a onClick={onSubmitLogin} > 
             <span></span>
             <span></span>
             <span></span>
