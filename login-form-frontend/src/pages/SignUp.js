@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import  useForm from '../hooks/UseForm'
 import axios from 'axios';
 import { BASE_URL } from '../constants/urls';
+import { goToLogin } from '../router/RouteFunctions';
 
 function SignUp() {
 
@@ -90,6 +91,13 @@ function SignUp() {
             <span></span>
             <span></span>
             Sign Up
+          </a>
+          <a style={{marginLeft: 90}} onClick={() => goToLogin(navigate)}> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Back
           </a>
         </form>
       </div>
