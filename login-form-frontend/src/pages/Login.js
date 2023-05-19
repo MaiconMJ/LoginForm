@@ -3,6 +3,7 @@ import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../constants/urls';
 import axios from 'axios';
+import { goToLogin, goToSignup } from '../router/RouteFunctions';
 
 
 function Login() {
@@ -38,6 +39,8 @@ function Login() {
         alert('User not found')
       })
 
+
+
   }
 
   return (
@@ -61,12 +64,19 @@ function Login() {
               required />
             <label>Password</label>
           </div>
-          <a onClick={onSubmitLogin}> 
+          <a onClick={() => goToLogin(navigate)}> 
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Enter
+          </a>
+          <a style={{marginLeft: 80}} onClick={() => goToSignup(navigate)}> 
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Sign up
           </a>
         </form>
       </div>
