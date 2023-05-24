@@ -30,13 +30,13 @@ function Login() {
     axios
       .post(`${BASE_URL}/`, body)
       .then((res) => {
-        console.log(res.data.token)
         localStorage.setItem('token', res.data.token)
         navigate('/profile')
+
       })
       .catch((err) => {
         console.log(err.response.data)
-        alert('User not found')
+        alert("User not found")
       })
 
   }
