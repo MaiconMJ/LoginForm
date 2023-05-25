@@ -31,6 +31,7 @@ function Login() {
       .post(`${BASE_URL}/`, body)
       .then((res) => {
         localStorage.setItem('token', res.data.token)
+        console.log(res.data.token)
         navigate('/profile')
 
       })
