@@ -13,20 +13,12 @@ function SignUp() {
     name: '',
     email: '',
     password: '',
-    confirmPassword: '',
   })
 
   
 
   const onSubmitForm = (event) => {
     event.preventDefault()
-
-    if (form.password !== form.confirmPassword) {
-      alert('Passwords do not match')
-
-    } else {
-      navigate('/profile')
-    }
   }
 
   const onSubmitSignup = () => {
@@ -76,16 +68,6 @@ function SignUp() {
               required 
             />
             <label>Password</label>
-          </div>
-          <div class="caixa__login-input">
-            <input 
-              type="password"
-              onChange={onChange}
-              name={'confirmPassword'}
-              value={form.confirmPassword}
-              required
-            />
-            <label>Confirm Password</label>
           </div>
           <a onClick={onSubmitSignup}>
             <span></span>
