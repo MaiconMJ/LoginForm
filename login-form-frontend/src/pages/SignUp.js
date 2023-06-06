@@ -39,7 +39,6 @@ function SignUp() {
       if(!form.name || !form.email || !form.password){
         alert("Please, fill all the fields")
       }
-
       
   }
 
