@@ -36,14 +36,13 @@ function Login() {
 
       })
       .catch((err) => {
-
+        console.log(err.response.data)
         alert("User not found")
       })
 
       if (!email || !password) {
         alert("Please, fill the fields!")
-      } else {}
-
+      }
 
   }
 

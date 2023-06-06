@@ -19,6 +19,9 @@ function SignUp() {
 
   const onSubmitForm = (event) => {
     event.preventDefault()
+
+    
+
   }
 
   const onSubmitSignup = () => {
@@ -32,6 +35,12 @@ function SignUp() {
       .catch((err) => {
         console.log(err.response.data)
       })
+
+      if(!form.name || !form.email || !form.password){
+        alert("Please, fill all the fields")
+      }
+
+      
   }
 
   return (
